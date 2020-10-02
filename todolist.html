@@ -3,94 +3,7 @@
   <head>
     <title>dueto park To do list</title>
     <meta charset="utf-8">
-    <style>
-    html,body {
-      width: 100%;
-      height:100%;
-      margin:0;
-      padding:0;
-      background-color:#A0D9CB;
-      }
-
-    .setting_contents{
-      margin:0px;
-      padding:0px;
-      text-align: center;
-    }
-    .setting_title{
-      color:#FFBE67;
-      font-size: 50px;
-      text-shadow: 5px 3px 0px #FF6666;
-    }
-    .setting_textbox{
-      color:#7D666E;
-      font-size:17px;
-      width:400px;
-      height:40px;
-      padding:5px 20px;
-      outline:0px;
-      border:none;
-      background-color:#FFF8C9;
-    }
-    .setting_Insert_button{
-      color: #7D666E;
-      font-size: 16px;
-      padding: 15px 32px;
-      margin: 15px 5px;
-      outline:0px;
-      border: none;
-      background-color: #FF6666;
-    }
-    .setting_li{
-      color:#7D666E;
-      font-weight: bolder;
-      font-size: 20px;
-      line-height:20px;
-      padding-left: 100px;
-      text-align: left;
-
-      width:500px;
-      margin-top:40px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .setting_X_button{
-      color : #7D666E;
-      height: 25px;
-      width: 25px;
-      margin-left:5px;
-      text-align: center;
-      border: 2px solid #e7e7e7;
-      background-color: #e7e7e7;
-    }
-
-    input[type=checkbox]+label{
-      margin-right: 10px;
-      display:inline-block;
-      width:15px;
-      height:15px;
-      background-color:#FFF8C9;
-      cursor: pointer;
-    }
-    input[type=checkbox]:checked+label{
-      background-color: #FF6666;
-    }
-    input[type=checkbox]{
-      display: none;
-    }
-
-    .status_complete{
-      color:#FF6666;
-      text-decoration: line-through;
-      font-style: italic;
-    }
-    .status_notComplete{
-      color:#7D666E;
-      text-decoration: none;
-    }
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
 
@@ -99,62 +12,15 @@
 
     <div class="setting_contents">
       <h1 class="setting_title">To Do List</h1>
-      <input type="text" id="inputText" class="setting_textbox"
+      <input type="text" id="inputData" class="setting_textbox"
       placeholder="Please type a task" autofocus onkeydown="enterKeyEvent()">
-      <button id="button" class="setting_Insert_button">Insert</button>
+      <button id="insertBtn" class="setting_Insert_button">Insert</button>
 
-      <div id="mylist" class="setting_li"></div>
+      <div id="toDoList" class="setting_li"></div>
     </div>
   </body>
 
 
-  <script>
-  var insertBtn = document.getElementById('button');
-  var data = document.getElementById('inputText');
-  var mylist = document.getElementById('mylist');
-
-
-  insertBtn.addEventListener('click',clickButton);
-
-  var cnt=1;
-
-  function clickButton(){
-    if(document.querySelector('input').value === ""){
-      alert("please type a task");
-    }else{
-    var appendList = document.createElement('p');
-    appendList.setAttribute("id","p"+cnt);
-    appendList.textContent = data.value;
-    appendList.innerHTML = "<input type='checkbox' id='ckbox"+cnt+"' onclick='checkedEvent("+cnt+")' ><label for='ckbox"+cnt+"'></label>" + appendList.textContent + " <button onclick='remove("+cnt+")' class='setting_X_button'>X</button>";
-    mylist.appendChild(appendList);
-    data.value = "";
-    document.getElementById("inputText").autofocus;
-    cnt = cnt + 1;
-    }
-  }
-
-  function enterKeyEvent(){
-    if(window.event.keyCode == 13){
-      clickButton();
-    }
-  }
-
-  function remove(cnt){
-    let li = document.getElementById("p"+cnt);
-    mylist.removeChild(li);
-  }
-
-  function checkedEvent(cnt){
-    var checkBox = document.getElementById('ckbox'+cnt);
-    var text = document.getElementById('p'+cnt);
-
-    if (checkBox.checked == true) {
-      text.className = "status_complete"
-    } else {
-      text.className = "status_notComplete"
-    }
-  }
-
-  </script>
+  <script src="function.js"></script>
 
 </html>
