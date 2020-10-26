@@ -6,15 +6,16 @@ html,body {
   background-color:#A0D9CB;
   }
 
-.setting_contents{
-  margin:0px;
-  padding:0px;
-  text-align: center;
-}
 .setting_title{
+  margin-top: 200px;
   color:#FFBE67;
+  text-align: center;
   font-size: 50px;
   text-shadow: 5px 3px 0px #FF6666;
+}
+.setting_contents{
+  padding:0px;
+  text-align: center;
 }
 .setting_textbox{
   color:#7D666E;
@@ -27,13 +28,14 @@ html,body {
   background-color:#FFF8C9;
 }
 .setting_Insert_button{
-  color: #7D666E;
-  font-size: 16px;
+  background-color: #FF6666;
   padding: 15px 32px;
   margin: 15px 5px;
+  color: #7D666E;
+  font-size: 16px;
   outline:0px;
   border: none;
-  background-color: #FF6666;
+  cursor: pointer;
 }
 .setting_li{
   color:#7D666E;
@@ -49,13 +51,15 @@ html,body {
   margin-right: auto;
 }
 .setting_X_button{
-  color : #7D666E;
+  background-color: #e7e7e7;
   height: 25px;
   width: 25px;
   margin-left:5px;
+  color : #7D666E;
   text-align: center;
   border: 2px solid #e7e7e7;
-  background-color: #e7e7e7;
+  outline: none;
+  cursor: pointer;
 }
 
 input[type=checkbox]+label{

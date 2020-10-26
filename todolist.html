@@ -1,23 +1,35 @@
 <!doctype html>
 <html>
   <head>
-    <title>dueto park To do list</title>
+    <title>To do list</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
 
   <body>
-    <div style="height:200px;"></div>
-
-    <div class="setting_contents">
+    <header>
       <h1 class="setting_title">To Do List</h1>
-      <input type="text" id="inputData" class="setting_textbox"
-      placeholder="Please type a task" autofocus onkeydown="enterKeyEvent()">
-      <button id="insertBtn" class="setting_Insert_button">Insert</button>
+    </header>
 
-      <div id="toDoList" class="setting_li"></div>
-    </div>
+    <main>
+      <section>
+        <div class="setting_contents">
+          <input type="text"
+            class="setting_textbox"
+            placeholder="Please type a task"
+            autofocus
+            onkeydown="enterKeyEvent()"
+            id="inputData">
+          <button type="button" id="insertBtn" class="setting_Insert_button">Insert</button>
+        </div>
+      </section>
+      
+      <section>
+        <div id="toDoList" class="setting_li"></div>
+      </section>
+    </main>
   </body>
 
 
