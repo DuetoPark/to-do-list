@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>To do list</title>
     <meta charset="utf-8">
@@ -21,12 +21,17 @@
             placeholder="Please type a task"
             autofocus
             onkeydown="enterKeyEvent()"
+            aria-label="please type a task here."
             id="inputData">
-          <button type="button" id="insertBtn" class="setting_Insert_button">Insert</button>
+          <button type="button"
+            id="insertBtn"
+            class="setting_Insert_button"
+            aria-label="Add tasks">Insert</button>
         </div>
       </section>
-      
+
       <section>
+        <h1 class="sr-only">Task Lists</h1>
         <div id="toDoList" class="setting_li"></div>
       </section>
     </main>

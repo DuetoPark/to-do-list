@@ -5,7 +5,19 @@ html,body {
   padding:0;
   background-color:#A0D9CB;
   }
-
+  section{
+    position: relative;
+  }
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
 .setting_title{
   margin-top: 200px;
   color:#FFBE67;
